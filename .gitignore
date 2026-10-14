@@ -30,6 +30,7 @@ env/
 .idea/
 *.swp
 *.swo
+settings.json
 
 # OS
 .DS_Store
@@ -44,3 +45,6 @@ Thumbs.db
 config.json
 config.ini
 secrets.json
+
+#ai stuffs
+AGENTS.md

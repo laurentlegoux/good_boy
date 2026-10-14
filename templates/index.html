@@ -458,5 +458,19 @@
       src="{{ url_for('static', filename='dsfr/js/dsfr.module.min.js') }}"
     ></script>
     <script src="{{ url_for('static', filename='app.js') }}"></script>
+  <!-- Initialisation du DSFR -->
+  <script type="module">
+    // Attendre que le DOM soit prêt
+    document.addEventListener('DOMContentLoaded', function() {
+      // Vérifier que les éléments requis existent
+      const rootElement = document.getElementById('content');
+      if (rootElement) {
+        // Initialisation du DSFR uniquement si nécessaire
+        if (typeof window.dsfr !== 'undefined') {
+          window.dsfr.init();
+        }
+      }
+    });
+  </script>
   </body>
 </html>
